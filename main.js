@@ -1,13 +1,23 @@
-array = [1,2,3,4]  //spread operator
+jQuery(function ($) {
+    $('#upsell-product-table-dy').slick({
+        centerMode: true,
+        centerPadding: '30px',
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
+        draggable: true,
+        swipe: true,
+        swipeToSlide: false,
+        touchMove: true
 
-array1 = [...array, 5,6,7];
+    });
+});
 
-console.log(array1);
-
-arr1 = [1,2,3,4]
-arr2=[5,6,7,8]
-
-
-const [a,b,  ...others] =[...arr1, ...arr2]
-
-console.log(a, b, others);
+$$('#findSpecialPrice').each(function(el) {
+if(el.innerHTML.length > 0) {
+el.up().up().show();
+el.up().up().previous().hide();
+}
+});
